@@ -1,7 +1,8 @@
 const path = require('path');
 const http = require('http');
 const fs = require('fs');
-var os = require("os");
+const os = require("os");
+const express = require("express");
 
 const fsread = fs.readFileSync("read.txt", "utf8");
 const fsreread = fs.writeFileSync("read.txt", "hello Yaroslav!");
@@ -23,10 +24,6 @@ console.log(os.type());
 console.log(os.platform());
 console.log(os.arch());
 console.log(os.freemem());
-
-
-
-
 
 
 const server = http.createServer((req, res) => {
